@@ -1,17 +1,12 @@
-package MooseX::Types::Set::Object;
-{
-  $MooseX::Types::Set::Object::VERSION = '0.04';
-}
-# git description: MooseX-Types-Set-Object-0.03-11-g7907c3a
-
-BEGIN {
-  $MooseX::Types::Set::Object::AUTHORITY = 'cpan:NUFFIN';
-}
+package MooseX::Types::Set::Object; # git description: v0.04-14-g6b3e9b5
 # ABSTRACT: Set::Object type with coercions and stuff.
+
+our $VERSION = '0.05';
 
 use MooseX::Types;
 use MooseX::Types::Moose qw(Object ArrayRef);
 use Set::Object ();
+use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
 class_type "Set::Object"; # FIXME not parameterizable
 
@@ -31,15 +26,13 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords יובל קוג'מן (Yuval Kogman) Yuval Kogman Florian Ragwitz Karen Etheridge
-
 =head1 NAME
 
 MooseX::Types::Set::Object - Set::Object type with coercions and stuff.
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -94,20 +87,11 @@ L<Moose::Util::TypeConstraints>
 
 יובל קוג'מן (Yuval Kogman) <nothingmuch@woobling.org>
 
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2008 by Yuval Kogman.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =head1 CONTRIBUTORS
 
+=for stopwords Karen Etheridge Florian Ragwitz
+
 =over 4
-
-=item *
-
-Florian Ragwitz <rafl@debian.org>
 
 =item *
 
@@ -115,8 +99,15 @@ Karen Etheridge <ether@cpan.org>
 
 =item *
 
-Yuval Kogman <nothingmuch@woobling.org>
+Florian Ragwitz <rafl@debian.org>
 
 =back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2008 by Yuval Kogman.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
